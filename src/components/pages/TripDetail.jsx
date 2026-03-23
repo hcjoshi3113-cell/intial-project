@@ -36,6 +36,23 @@ const TripDetail = () => {
     }
   }
 
+  if (!trip) {
+    return (
+      <Container>
+        <Row>
+          <Col>
+            <Card className="shadow mt-5">
+              <Card.Body>
+                <Card.Title>Trips Detail not Found</Card.Title>
+                <Button variant="primary" onClick={() => navigate(-1)} >Back To Trips</Button>
+              </Card.Body>
+            </Card></Col>
+        </Row>
+      </Container>
+    )
+
+  }
+
 
   return (
     <>
