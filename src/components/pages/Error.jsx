@@ -10,13 +10,13 @@ const Error = () => {
     const errorMessage = location.state?.message || "Page Not Found"
 
     useEffect(() => {
-        document.title = `Error ${errorCode} - TripVerse`
+        document.title = `Error ${errorCode} - TastyHub`
     }, [errorCode])
 
     const renderErrorIllustration = () => {
         switch(errorCode) {
             case 404:
-                return '🛫'
+                return '🍔'
             case 500:
                 return '⚠️'
             case 403:
@@ -30,7 +30,7 @@ const Error = () => {
         const details = {
             404: {
                 title: "Page Not Found",
-                description: "Oops! It looks like this page has taken off elsewhere. Let's get you back on track!",
+                description: "Oops! It looks like this page was cooked elsewhere. Let's get you back on track!",
                 suggestion: "The page you're looking for might have moved or doesn't exist."
             },
             500: {
@@ -104,7 +104,7 @@ const Error = () => {
                             {/* Help Text */}
                             <div className={styles.helpSection}>
                                 <p className={styles.helpText}>
-                                    Need help? <a href="/contact">Contact our support team</a>
+                                    Need help? <a href="/">Contact our support team</a>
                                 </p>
                             </div>
 
@@ -116,17 +116,17 @@ const Error = () => {
                                         <span className={styles.icon}>🏠</span>
                                         Home
                                     </a>
-                                    <a href="/trips" className={styles.quickLink}>
-                                        <span className={styles.icon}>✈️</span>
-                                        Explore Trips
+                                    <a href="/restaurants" className={styles.quickLink}>
+                                        <span className={styles.icon}>🍔</span>
+                                        Find Restaurants
                                     </a>
                                     <a href="/about" className={styles.quickLink}>
                                         <span className={styles.icon}>ℹ️</span>
                                         About Us
                                     </a>
-                                    <a href="/contact" className={styles.quickLink}>
+                                    <a href="/" className={styles.quickLink}>
                                         <span className={styles.icon}>📧</span>
-                                        Contact
+                                        Support
                                     </a>
                                 </div>
                             </div>

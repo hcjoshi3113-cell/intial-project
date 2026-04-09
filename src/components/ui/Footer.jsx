@@ -9,9 +9,9 @@ function Footer() {
           {/* Brand */}
           <div className={styles.footerBrand}>
             <div className={styles.logo}>
-              <span className={styles.logoIcon}>✈</span> TripVerse
+              <span className={styles.logoIcon}>🍔</span> TastyHub
             </div>
-            <p>Crafting extraordinary travel experiences across India since 2020. Every journey tells a story — let us write yours.</p>
+            <p>Crafting mouth-watering food experiences across India since 2020. Every meal tells a story — let us serve yours.</p>
             <div className={styles.footerSocial}>
               <a href="#" aria-label="Instagram">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="5" /><circle cx="17.5" cy="6.5" r="1.5" /></svg>
@@ -28,14 +28,14 @@ function Footer() {
             </div>
           </div>
 
-          {/* Destinations */}
+          {/* Categories */}
           <div className={styles.footerCol}>
-            <h4>Destinations</h4>
-            <Link to="/trips">Manali</Link>
-            <Link to="/trips">Goa</Link>
-            <Link to="/trips">Kerala</Link>
-            <Link to="/trips">Rajasthan</Link>
-            <Link to="/trips">Ladakh</Link>
+            <h4>Top Categories</h4>
+            <Link to="/restaurants">North Indian</Link>
+            <Link to="/restaurants">Italian</Link>
+            <Link to="/restaurants">Desserts</Link>
+            <Link to="/restaurants">Beverages</Link>
+            <Link to="/restaurants">Healthy</Link>
           </div>
 
           {/* Company */}
@@ -60,7 +60,7 @@ function Footer() {
         </div>
 
         <div className={styles.footerBottom}>
-          <span>&copy; {new Date().getFullYear()} TripVerse. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} TastyHub. All rights reserved.</span>
           <span>Made with ❤️ in India</span>
         </div>
       </div>

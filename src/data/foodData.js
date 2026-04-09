@@ -1,0 +1,326 @@
+export const foodList = [
+  // AHMEDABAD
+  {
+    id: 1,
+    name: "Khaman Dhokla",
+    category: "Street Food",
+    price: 60,
+    prepTime: "10-15 Min",
+    rating: 4.8,
+    type: "Veg",
+    restaurant: "Das Khaman",
+    city: "Ahmedabad",
+    freeDelivery: true,
+    image: "https://images.pexels.com/photos/35041878/pexels-photo-35041878.jpeg",
+    overview: "Spongy, savory gram flour cakes tempered with mustard seeds and curry leaves.",
+    ingredients: ["Gram Flour", "Mustard Seeds", "Curry Leaves"]
+  },
+  {
+    id: 2,
+    name: "Amdavadi Maskabun",
+    category: "Snacks",
+    price: 40,
+    prepTime: "5-10 Min",
+    rating: 4.9,
+    type: "Veg",
+    restaurant: "Lucky Tea Stall",
+    city: "Ahmedabad",
+    freeDelivery: false,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/3/10/a117d3d7-10b2-4f7c-80d9-673439af58f7_ac413117-c35d-4597-a633-0def993b1aeb.jpg",
+    overview: "Soft bun loaded with fresh butter, best served with cutting chai.",
+    ingredients: ["Bun", "Amul Butter", "Jam"]
+  },
+  {
+    id: 3,
+    name: "Kathiyawadi Thali",
+    category: "Gujarati Special",
+    price: 350,
+    prepTime: "35-40 Min",
+    rating: 4.8,
+    type: "Veg",
+    restaurant: "Gopi Dining Hall",
+    city: "Ahmedabad",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2025/3/18/8399b118-7596-4535-8d4c-70ab50db31b5_f2f3bb2c-0a82-462d-bfc6-46150e4b93c8.jpg",
+    overview: "Spicy rustic Gujarati thali with bold flavors.",
+    ingredients: ["Bajra", "Garlic", "Chili", "Turmeric", "Cumin", "Mustard", "Ghee", "Tomato", "Potato", "Brinjal", "Curd", "Jaggery"]
+  },
+  {
+    id: 4,
+    name: "Handvo",
+    category: "Snacks",
+    price: 120,
+    prepTime: "25-30 Min",
+    rating: 4.7,
+    type: "Veg",
+    restaurant: "Swati Snacks",
+    city: "Ahmedabad",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/2fd14de164e34d43c49352e2071c04cc",
+    overview: "Savory baked lentil cake with crispy crust.",
+    ingredients: ["Rice", "Lentils", "Bottle Gourd", "Spices"]
+  },
+
+  // SURAT
+  {
+    id: 5,
+    name: "Surti Locho",
+    category: "Street Food",
+    price: 80,
+    prepTime: "5-10 Min",
+    rating: 4.9,
+    type: "Veg",
+    restaurant: "Jani Locho",
+    city: "Surat",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2025/12/2/55431f2d-910e-4b99-8fde-4770c732f493_6045acd1-1c19-437f-b615-1c62080ce78a.jpg",
+    overview: "A popular Gujarati street food made from steamed gram flour.",
+    ingredients: ["Gram Flour", "Oil", "Chili", "Sev"]
+  },
+  {
+    id: 6,
+    name: "Surti Ghari",
+    category: "Dessert",
+    price: 200,
+    prepTime: "10 Min",
+    rating: 4.7,
+    type: "Veg",
+    restaurant: "Shree Hari",
+    city: "Surat",
+    freeDelivery: false,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2024/3/12/989d03fb-095a-4ecc-98d9-f7ee495ee788_c3d6ac20-9c84-4d3a-a504-580ecb54f188.jpg_compressed",
+    overview: "Rich sweet made of puri, mawa, and pistachio, coated in ghee.",
+    ingredients: ["Mawa", "Pistachio", "Ghee", "Flour"]
+  },
+  {
+    id: 7,
+    name: "Undhiyu",
+    category: "Gujarati Special",
+    price: 250,
+    prepTime: "30-35 Min",
+    rating: 4.9,
+    type: "Veg",
+    restaurant: "Sasuma Gujarati Thali",
+    city: "Surat",
+    freeDelivery: false,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/eh5doq0bacajg6rbru8u",
+    overview: "Mixed vegetable delicacy cooked with traditional spices.",
+    ingredients: ["Vegetables", "Methi", "Spices", "Oil"]
+  },
+
+  // VADODARA
+  {
+    id: 8,
+    name: "Mahakali Sev Usal",
+    category: "Street Food",
+    price: 70,
+    prepTime: "10-15 Min",
+    rating: 4.8,
+    type: "Veg",
+    restaurant: "Mahakali Sev Usal",
+    city: "Vadodara",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/RX_THUMBNAIL/IMAGES/VENDOR/2025/7/8/b7a42ef8-91a0-4aac-8df4-802441d0f0a6_1126284.jpg",
+    overview: "A spicy peas gravy served with pav and topped with sev.",
+    ingredients: ["Dry Peas", "Spices", "Pav", "Sev"]
+  },
+  {
+    id: 9,
+    name: "Dal Dhokli",
+    category: "Main Course",
+    price: 140,
+    prepTime: "20-25 Min",
+    rating: 4.6,
+    type: "Veg",
+    restaurant: "Mandap Restaurant",
+    city: "Vadodara",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/f2994f1d7b74956a6c092d93cfafce57",
+    overview: "Comfort food with wheat dumplings in dal.",
+    ingredients: ["Wheat Flour", "Dal", "Spices", "Ghee"]
+  },
+
+  // RAJKOT
+  {
+    id: 10,
+    name: "Rajkot Special Peda",
+    category: "Dessert",
+    price: 450,
+    prepTime: "10 Min",
+    rating: 4.9,
+    type: "Veg",
+    restaurant: "Jai Hind Sweets",
+    city: "Rajkot",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2024/6/22/c6dfbcd8-768a-4aee-ab00-3041c5bdd317_e808d4de-cdfc-4fe0-878e-7f9e07308bb4.JPG",
+    overview: "Famous brown pedas made from condensed milk and cardamom.",
+    ingredients: ["Milk", "Sugar", "Cardamom"]
+  },
+  {
+    id: 11,
+    name: "Methi na Gota",
+    category: "Snacks",
+    price: 250,
+    prepTime: "20-25 Min",
+    rating: 4.8,
+    type: "Veg",
+    restaurant: "Mayur Bhajiya",
+    city: "Rajkot",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/lrai27mjoizxqdoryymo",
+    overview: "Crispy fried methi fritters with spicy flavor",
+    ingredients: ["Besan", "Methi", "Chili", "Ginger", "Salt", "Oil"]
+  },
+
+  // BHAVNAGAR
+  {
+    id: 12,
+    name: "Bhavnagari Gathiya",
+    category: "Snacks",
+    price: 120,
+    prepTime: "5-10 Min",
+    rating: 4.9,
+    type: "Veg",
+    restaurant: "ManuBhai Gathiyawala",
+    city: "Bhavnagar",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/10d356540d377090fa600f06c84b2cc6",
+    overview: "World-famous crispy gram flour snacks.",
+    ingredients: ["Gram Flour", "Black Pepper", "Oil"]
+  },
+  {
+    id: 13,
+    name: "Gathiya & Jalebi Special",
+    category: "Combo",
+    price: 150,
+    prepTime: "15 Min",
+    rating: 4.9,
+    type: "Veg",
+    restaurant: "Laxmi Gathiya",
+    city: "Bhavnagar",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2025/11/25/ce7a8ee5-bf28-4422-b862-784f0f31748c_bbc99244-07b8-450e-ace8-9e9d2e107c7c.jpg",
+    overview: "The most iconic breakfast combo of Bhavnagar.",
+    ingredients: ["Besan", "Sugar Syrup", "Oil", "Saffron"]
+  },
+
+  // JAMNAGAR
+  {
+    id: 14,
+    name: "Jamnagar Kachori",
+    category: "Snacks",
+    price: 100,
+    prepTime: "10 Min",
+    rating: 4.8,
+    type: "Veg",
+    restaurant: "H.J. Vyas",
+    city: "Jamnagar",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/9/18/e9d283f3-7f4b-4031-b932-60c82afc1a56_cd54331b-54f1-47a1-84aa-0fd191c98600.jpg",
+    overview: "Spicy and tangy dry fruit kachori, a Jamnagar specialty.",
+    ingredients: ["Dry Fruits", "Spices", "Flour"]
+  },
+  {
+    id: 15,
+    name: "Khajur Katri",
+    category: "Dessert",
+    price: 180,
+    prepTime: "15-20 Min",
+    rating: 4.8,
+    type: "Veg",
+    restaurant: "Shree Sweets",
+    city: "Jamnagar",
+    freeDelivery: false,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2024/5/20/f7e5b2de-d635-4277-9e60-932c8d2a5e63_48e7f23d-c329-445c-82c0-169250a6c40e.jpeg",
+    overview: "Healthy sweet made with dates and dry fruits.",
+    ingredients: ["Dates", "Dry Fruits", "Ghee", "Cardamom"]
+  },
+
+  // KUTCH
+  {
+    id: 16,
+    name: "Kutchi Dabeli",
+    category: "Street Food",
+    price: 50,
+    prepTime: "5-10 Min",
+    rating: 4.9,
+    type: "Veg",
+    restaurant: "Vishwa Dabeli",
+    city: "Kutch",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/3/14/6952893d-9349-4e17-81e3-7b666e2ec13b_ae6f5655-f032-42f2-b2a9-83fd3286d3d5.jpg",
+    overview: "Spiced potato filling in a bun, garnished with pomegranate and peanuts.",
+    ingredients: ["Pav", "Potato", "Dabeli Masala", "Peanuts"]
+  },
+
+  // GANDHINAGAR
+  {
+    id: 17,
+    name: "Special Masala Tea",
+    category: "Beverage",
+    price: 30,
+    prepTime: "5 Min",
+    rating: 4.7,
+    type: "Veg",
+    restaurant: "Capital Tea Post",
+    city: "Gandhinagar",
+    freeDelivery: false,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/d660826a8122de9007742cf75d7a06d2",
+    overview: "Refreshing tea brewed with aromatic Indian spices.",
+    ingredients: ["Milk", "Tea Leaves", "Ginger", "Cardamom"]
+  },
+  {
+    id: 18,
+    name: "Fafda",
+    category: "Snacks",
+    price: 90,
+    prepTime: "10 Min",
+    rating: 4.9,
+    type: "Veg",
+    restaurant: "Balaji Farsan",
+    city: "Gandhinagar",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/1/23/26f59717-6f0c-4660-964e-bfdf6fd841e9_c8ebe44e-cee2-4311-aa79-839939f39d62.JPG  ",
+    overview: "Crispy fried snack made from gram flour.",
+    ingredients: ["Besan", "Ajwain", "Oil", "Salt"]
+  },
+  {
+    id: 19,
+    name: "Dakor na Gota",
+    category: "Snacks",
+    price: 80,
+    prepTime: "10-15 Min",
+    rating: 4.8,
+    type: "Veg",
+    restaurant: "Ranchhodji Prasad Stall",
+    city: "Dakor",
+    freeDelivery: true,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/5ab7f75e1fd193adf9a52cfef5cea619",
+    overview: "Famous crispy temple-style gota served hot.",
+    ingredients: ["Besan", "Methi", "Chili", "Oil"]
+  },
+  {
+    id: 20,
+    name: "Bajra no Rotlo Combo",
+    category: "Gujarati Special",
+    price: 160,
+    prepTime: "20-25 Min",
+    rating: 4.7,
+    type: "Veg",
+    restaurant: "Banaskantha Dhaba",
+    city: "Banaskantha",
+    freeDelivery: false,
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/48017d666ad7dfac114ba22d04d9f50c",
+    overview: "Traditional bajra rotlo served with ghee and jaggery.",
+    ingredients: ["Bajra", "Ghee", "Jaggery", "Garlic"]
+  },
+
+
+];
+
+// Reusable list of cities
+export const gujaratCities = [
+  "Ahmedabad", "Surat", "Vadodara", "Rajkot", "Bhavnagar",
+  "Gandhinagar", "Kutch", "Jamnagar", "Somnath", "Dwarka",
+  "Banaskantha", "Dakor"
+];

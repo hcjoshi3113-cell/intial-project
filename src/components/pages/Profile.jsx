@@ -9,7 +9,7 @@ const Profile = () => {
   const navigate = useNavigate();
   const { user } = useContext(authContext);
   const [settings, setSettings] = useState({
-    emailNotif: true, sms: false, darkMode: false, twoFactor: false, location: true,
+    emailNotif: true, sms: false, twoFactor: false, location: true,
   });
 
   const panelsRef = useRef([]);
@@ -39,7 +39,9 @@ const Profile = () => {
 
   const initials = user.displayName ? user.displayName.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2) : "U";
 
-  const handleToggle = (key) => setSettings(prev => ({ ...prev, [key]: !prev[key] }));
+  const handleToggle = (key) => {
+    setSettings(prev => ({ ...prev, [key]: !prev[key] }));
+  };
 
   const handleDelete = () => {
     if (confirm("Are you sure you want to delete your account? This action cannot be undone.")) {
@@ -75,7 +77,7 @@ const Profile = () => {
               </span>
               <span className={styles.statPill}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" /><circle cx="12" cy="10" r="3" /></svg>
-                12 Trips
+                12 Orders
               </span>
             </div>
           </div>
@@ -88,9 +90,9 @@ const Profile = () => {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09z" /></svg>
               Settings
             </a>
-            <Link to="/trips" className={styles.quickLink}>
+            <Link to="/restaurants" className={styles.quickLink}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
-              Browse Trips
+              Browse Menu
             </Link>
             <button onClick={handleLogout} className={`${styles.quickLink} ${styles.logoutLink}`}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" /></svg>
@@ -129,11 +131,10 @@ const Profile = () => {
               </h3>
             </div>
             {[
-              { key: "emailNotif", title: "Email Notifications", desc: "Receive updates about trips and offers" },
-              { key: "sms", title: "SMS Alerts", desc: "Get trip reminders via SMS" },
-              { key: "darkMode", title: "Dark Mode", desc: "Switch to dark theme" },
+              { key: "emailNotif", title: "Email Notifications", desc: "Receive updates about orders and offers" },
+              { key: "sms", title: "SMS Alerts", desc: "Get delivery reminders via SMS" },
               { key: "twoFactor", title: "Two-Factor Authentication", desc: "Add extra security to your account" },
-              { key: "location", title: "Location Sharing", desc: "Share your location during trips" },
+              { key: "location", title: "Location Sharing", desc: "Share your location for accurate delivery" },
             ].map(s => (
               <div key={s.key} className={styles.settingRow}>
                 <div className={styles.settingInfo}>
@@ -156,7 +157,7 @@ const Profile = () => {
                 Danger Zone
               </h3>
             </div>
-            <p className={styles.dangerText}>Once you delete your account, there is no going back. All your trip data, bookings, and preferences will be permanently removed.</p>
+            <p className={styles.dangerText}>Once you delete your account, there is no going back. All your order data, bookings, and preferences will be permanently removed.</p>
             <button className={styles.deleteBtn} onClick={handleDelete}>Delete My Account</button>
           </div>
         </div>

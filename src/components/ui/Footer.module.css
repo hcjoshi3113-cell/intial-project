@@ -1,8 +1,8 @@
-/* ─── FOOTER ─── */
 .footer {
-  background: var(--footer-bg);
-  color: rgba(255, 255, 255, 0.7);
+  background: #121212;
+  color: rgba(255, 255, 255, 0.9);
   padding: 80px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .container {
@@ -43,10 +43,10 @@
 }
 
 .footerBrand p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.8;
   margin-bottom: 24px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footerSocial {
@@ -82,9 +82,9 @@
 
 .footerCol a {
   display: block;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
-  padding: 6px 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 8px 0;
   transition: var(--transition);
   text-decoration: none;
 }
@@ -95,12 +95,13 @@
 }
 
 .footerBottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 32px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* ─── RESPONSIVE ─── */

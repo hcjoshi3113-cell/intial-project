@@ -1,15 +1,20 @@
+import { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./routes/MainLayout";
 import Home from "./components/pages/Home";
 import About from "./components/ui/About";
-import Trips from "./components/pages/Trips";
-import TripDetail from "./components/pages/TripDetail";
+import Menu from "./components/pages/Menu";
+import FoodDetail from "./components/pages/FoodDetail";
+import Cart from "./components/pages/Cart";
+import Checkout from "./components/pages/Checkout";
 import Auth from "./components/auth/Auth";
-import BookingsForm from "./components/pages/BookingsForm";
 import ProtectedRoutes from "./routes/ProtectedRoutes";
 import Error from "./components/pages/Error";
-import MyBookings from "./components/pages/MyBookings";
+import MyOrders from "./components/pages/MyOrders";
 import Profile from "./components/pages/Profile";
+import Restaurants from "./components/pages/Restaurants";
+import { CartProvider } from "./components/context/CartContext";
+import { LocationProvider } from "./components/context/LocationContext";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -31,23 +36,31 @@ const App = () => {
           element: <About />,
         },
         {
-          path: "trips",
-          element: <Trips />,
+          path: "restaurants",
+          element: <Restaurants />,
         },
         {
-          path: "trip/:id",
-          element: <TripDetail />,
+          path: "restaurant/:restaurantName",
+          element: <Menu />,
+        },
+        {
+          path: "food/:id",
+          element: <FoodDetail />,
+        },
+        {
+          path: "cart",
+          element: <Cart />,
         },
         {
           element: <ProtectedRoutes />,
           children: [
             {
-              path: "/booking/:id",
-              element: <BookingsForm />
+              path: "/checkout",
+              element: <Checkout />
             },
             {
-              path: "/myBookings",
-              element: <MyBookings />
+              path: "/myorders",
+              element: <MyOrders />
             },
             {
               path: "/profile",
@@ -60,9 +73,11 @@ const App = () => {
   ]);
 
   return (
-    <>
-      <RouterProvider router={router}></RouterProvider>
-    </>
+    <LocationProvider>
+      <CartProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </CartProvider>
+    </LocationProvider>
   );
 };
 

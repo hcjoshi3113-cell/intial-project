@@ -1,10 +1,21 @@
 .heroSection {
-  background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
+  background: var(--grad-primary);
   color: white;
-  padding: calc(8px * 12) 0;
-  margin-bottom: calc(8px * 6);
+  padding: 160px 0 100px;
   position: relative;
   overflow: hidden;
+  text-align: center;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.1) 0%, transparent 50%);
+  animation: float 10s infinite;
 }
 
 .heroSection::before {

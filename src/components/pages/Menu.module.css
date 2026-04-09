@@ -1,7 +1,13 @@
 /* ─── PAGE HERO ─── */
 .pageHero { padding: 140px 0 64px; background: var(--grad-primary); text-align: center; }
 .pageHero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; color: #fff; margin-bottom: 12px; }
-.pageHero p { font-size: clamp(.95rem, 2vw, 1.1rem); color: rgba(255,255,255,.6); max-width: 560px; margin: 0 auto; }
+.pageHero p { font-size: clamp(.95rem, 2vw, 1.1rem); color: rgba(255,255,255,.6); max-width: 560px; margin: 0 auto 32px; }
+.searchWrap { max-width: 600px; margin: 0 auto; }
+.searchBar { display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 14px 24px; border-radius: 999px; transition: var(--transition); }
+.searchBar:focus-within { background: rgba(255, 255, 255, 0.15); border-color: var(--accent-1); box-shadow: 0 0 0 4px rgba(0, 201, 255, 0.15); }
+.searchBar svg { color: var(--accent-1); }
+.searchBar input { flex: 1; background: none; border: none; outline: none; color: #fff; font-size: 1rem; font-family: inherit; }
+.searchBar input::placeholder { color: rgba(255,255,255,.5); }
 .gradientText { background: var(--grad-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
@@ -10,21 +16,24 @@
 .filterBar .container { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .filterGroup { display: flex; align-items: center; gap: 8px; }
 .filterGroup label { font-size: .8rem; font-weight: 600; color: var(--txt-secondary); text-transform: uppercase; letter-spacing: 1px; }
-.filterSelect { padding: 10px 36px 10px 16px; border-radius: var(--radius-btn); border: 1.5px solid rgba(0,0,0,.1); background: #fff; font-size: .9rem; font-weight: 500; color: var(--txt-primary); transition: var(--transition); appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; min-width: 160px; cursor: pointer; font-family: inherit; }
+.filterSelect { padding: 10px 36px 10px 16px; border-radius: var(--radius-btn); border: 1.5px solid rgba(0,0,0,.1); background: var(--card-bg); font-size: .9rem; font-weight: 500; color: var(--txt-primary); transition: var(--transition); appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; min-width: 160px; cursor: pointer; font-family: inherit; }
 .filterSelect:focus { outline: none; border-color: var(--accent-1); box-shadow: 0 0 0 3px rgba(0,201,255,.1); }
 .filterReset { padding: 10px 20px; background: transparent; border: 1.5px solid rgba(0,0,0,.1); border-radius: var(--radius-btn); font-size: .85rem; font-weight: 600; color: var(--txt-secondary); transition: var(--transition); cursor: pointer; font-family: inherit; }
 .filterReset:hover { border-color: var(--accent-1); color: var(--accent-1); }
 .filterCount { margin-left: auto; font-size: .85rem; color: var(--txt-secondary); font-weight: 500; }
 .filterCount span { color: var(--accent-1); font-weight: 700; }
 
-/* ─── TRIPS GRID ─── */
-.tripsSection { padding: 48px 0 96px; }
-.tripsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.tripCard { background: #fff; border-radius: var(--radius-card); overflow: hidden; transition: var(--transition); border: 1px solid rgba(0,0,0,.04); }
-.tripCard:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+/* ─── MENU GRID ─── */
+.menuSection { padding: 48px 0 96px; }
+.menuGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.menuCard { background: var(--card-bg); border-radius: var(--radius-card); overflow: hidden; transition: var(--transition); border: 1px solid rgba(0,0,0,.04); }
+.freeBadge { position: absolute; top: 16px; left: 16px; background: var(--success); color: #fff; padding: 4px 12px; border-radius: 8px; font-weight: 700; font-size: 0.75rem; z-index: 2; }
+.checkboxLabel { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 600; color: var(--txt-secondary); cursor: pointer; height: 100%; }
+.checkboxLabel input { width: 18px; height: 18px; cursor: pointer; }
+.menuCard:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
 .imageWrap { position: relative; aspect-ratio: 16/10; overflow: hidden; }
 .imageWrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
-.tripCard:hover .imageWrap img { transform: scale(1.06); }
+.menuCard:hover .imageWrap img { transform: scale(1.06); }
 .priceBadge { position: absolute; top: 16px; right: 16px; padding: 6px 16px; background: linear-gradient(135deg, rgba(15,32,39,.85), rgba(44,83,100,.85)); backdrop-filter: blur(8px); border-radius: 999px; color: var(--price); font-weight: 700; font-size: .95rem; border: 1px solid rgba(0,201,255,.2); }
 .difficultyBadge { position: absolute; top: 16px; left: 16px; padding: 4px 12px; border-radius: 999px; font-size: .75rem; font-weight: 600; backdrop-filter: blur(8px); }
 .easy { background: rgba(16,185,129,.15); color: #10B981; border: 1px solid rgba(16,185,129,.2); }
@@ -33,8 +42,8 @@
 .cardBody { padding: 24px; }
 .tags { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
 .tags span { padding: 4px 10px; border-radius: 999px; font-size: .7rem; font-weight: 600; background: rgba(0,201,255,.08); color: var(--accent-1); }
-.tripCard h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; transition: var(--transition); }
-.tripCard:hover h3 { color: var(--clr-primary-3); }
+.menuCard h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; transition: var(--transition); }
+.menuCard:hover h3 { color: var(--clr-primary-3); }
 .meta { display: flex; align-items: center; gap: 16px; color: var(--txt-secondary); font-size: .85rem; margin-bottom: 16px; }
 .meta svg { width: 14px; height: 14px; stroke: var(--txt-secondary); flex-shrink: 0; }
 .metaItem { display: flex; align-items: center; gap: 4px; }
@@ -54,7 +63,7 @@
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
-  .tripsGrid { grid-template-columns: 1fr; }
+  .menuGrid { grid-template-columns: 1fr; }
   .filterBar .container { flex-direction: column; align-items: stretch; }
   .filterCount { margin-left: 0; margin-top: 4px; }
 }

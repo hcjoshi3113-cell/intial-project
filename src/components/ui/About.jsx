@@ -50,10 +50,10 @@ function About() {
 
   let ri = 0;
   const team = [
-    { initials: "AR", name: "Aarav Rajan", role: "Founder & CEO", short: "Ex-GoTrip, 10+ years in hospitality and tech.", long: "Aarav founded TripVerse after realising India's travel industry deserved a modern, tech-first approach that never sacrifices the personal touch." },
-    { initials: "PM", name: "Priya Menon", role: "Head of Operations", short: "Logistics expert, managed 1,000+ group trips.", long: "Priya ensures every TripVerse journey runs like clockwork — from transport coordination to emergency support." },
-    { initials: "VK", name: "Vikram Kapoor", role: "Lead Developer", short: "Full-stack wizard, built the entire TripVerse platform.", long: "Vikram combines his love of code and travel to build intuitive tools that make trip discovery effortless." },
-    { initials: "NS", name: "Neha Sharma", role: "Creative Director", short: "Photographer turned brand strategist, storytelling at heart.", long: "Neha crafts the visual identity of TripVerse, ensuring every touchpoint inspires the wanderlust within." },
+    { initials: "AR", name: "Aarav Rajan", role: "Founder & CEO", short: "Ex-FoodDash, 10+ years in culinary and tech.", long: "Aarav founded TastyHub after realising India's food delivery industry deserved a modern, tech-first approach that never sacrifices quality." },
+    { initials: "PM", name: "Priya Menon", role: "Head of Operations", short: "Logistics expert, managed 10,000+ daily orders.", long: "Priya ensures every TastyHub delivery runs like clockwork — from kitchen coordination to rider support." },
+    { initials: "VK", name: "Vikram Kapoor", role: "Lead Developer", short: "Full-stack wizard, built the entire TastyHub platform.", long: "Vikram combines his love of code and food to build intuitive tools that make discovering dishes effortless." },
+    { initials: "NS", name: "Neha Sharma", role: "Creative Director", short: "Food photographer turned brand strategist.", long: "Neha crafts the visual identity of TastyHub, ensuring every touchpoint inspires the foodie within." },
   ];
 
   return (
@@ -61,8 +61,8 @@ function About() {
       {/* Hero */}
       <section className={styles.aboutHero}>
         <div className={styles.container}>
-          <h1>About <span className={styles.gradientText}>TripVerse</span></h1>
-          <p>We're on a mission to make extraordinary travel accessible through curated experiences, expert guides, and unmatched hospitality.</p>
+          <h1>About <span className={styles.gradientText}>TastyHub</span></h1>
+          <p>We're on a mission to make extraordinary food accessible through curated menus, expert chefs, and unmatched delivery speed.</p>
         </div>
       </section>
 
@@ -71,10 +71,10 @@ function About() {
         <div className={styles.container}>
           <div className={styles.statsGrid}>
             {[
-              { icon: "🌍", target: "500", label: "Destinations" },
-              { icon: "😊", target: "50000", label: "Happy Travellers" },
+              { icon: "🍔", target: "500", label: "Unique Dishes" },
+              { icon: "😊", target: "50000", label: "Happy Foodies" },
               { icon: "⭐", target: "4.9", label: "Avg Rating" },
-              { icon: "🏆", target: "15", label: "Awards Won" },
+              { icon: "🏆", target: "15", label: "Culinary Awards" },
             ].map((s, i) => (
               <div key={i} className={styles.statCard} ref={el => revealRef.current[ri++] = el}>
                 <div className={styles.statIcon}>{s.icon}</div>
@@ -93,12 +93,12 @@ function About() {
             <div className={styles.mvCard} ref={el => revealRef.current[ri++] = el}>
               <div className={styles.mvIcon}>🎯</div>
               <h3>Our Mission</h3>
-              <p>To democratize premium travel experiences by connecting curious explorers with India's most awe-inspiring destinations. We believe every journey should be transformative, affordable, and deeply personal.</p>
+              <p>To democratize premium culinary experiences by connecting curious foodies with India's most mouth-watering dishes. We believe every meal should be delicious, affordable, and crafted with care.</p>
             </div>
             <div className={styles.mvCard} ref={el => revealRef.current[ri++] = el}>
               <div className={styles.mvIcon}>🔭</div>
               <h3>Our Vision</h3>
-              <p>To become India's most trusted travel platform where technology meets hospitality. We envision a world where booking your dream trip is as seamless as daydreaming about it.</p>
+              <p>To become India's most trusted food platform where technology meets gastronomy. We envision a world where ordering your dream meal is as seamless as craving it.</p>
             </div>
           </div>
         </div>
@@ -113,10 +113,10 @@ function About() {
           </div>
           <div className={styles.valuesGrid}>
             {[
-              { emoji: "🤝", title: "Trust & Transparency", desc: "No hidden fees, no surprises. We practice radical honesty in pricing, itinerary details, and customer communication." },
-              { emoji: "🌱", title: "Sustainability", desc: "We champion responsible travel. Every trip supports local communities, preserves natural habitats, and reduces carbon footprint." },
-              { emoji: "✨", title: "Excellence", desc: "From hand-picked stays to expert guides, every detail is curated for an experience that exceeds expectations — every single time." },
-              { emoji: "💡", title: "Innovation", desc: "We leverage cutting-edge technology to simplify travel planning while keeping the human touch that makes journeys memorable." },
+              { emoji: "🤝", title: "Trust & Transparency", desc: "No hidden fees, no surprises. We practice radical honesty in pricing, ingredients details, and customer communication." },
+              { emoji: "🌱", title: "Fresh Ingredients", desc: "We champion responsible sourcing. Every meal supports local farmers and guarantees fresh, high-quality ingredients." },
+              { emoji: "✨", title: "Excellence", desc: "From hand-picked recipes to expert chefs, every detail is curated for an experience that exceeds expectations — every single bite." },
+              { emoji: "💡", title: "Innovation", desc: "We leverage cutting-edge technology to simplify food ordering while keeping the human touch that makes eating memorable." },
             ].map((v, i) => (
               <div key={i} className={styles.valueCard} ref={el => revealRef.current[ri++] = el}>
                 <h4><span>{v.emoji}</span> {v.title}</h4>
@@ -132,7 +132,7 @@ function About() {
         <div className={styles.container}>
           <div className={styles.header}>
             <div className={styles.sectionLabel}><span className={styles.dot}></span> Our Team</div>
-            <h2 className={styles.sectionTitle}>The <span className={styles.gradientText}>People</span> Behind TripVerse</h2>
+            <h2 className={styles.sectionTitle}>The <span className={styles.gradientText}>People</span> Behind TastyHub</h2>
           </div>
           <div className={styles.teamGrid}>
             {team.map((m, i) => (
@@ -157,15 +157,15 @@ function About() {
         <div className={styles.container}>
           <div className={styles.header}>
             <div className={styles.sectionLabel}><span className={styles.dot}></span> Why Choose Us</div>
-            <h2 className={styles.sectionTitle}>The TripVerse <span className={styles.gradientText}>Difference</span></h2>
+            <h2 className={styles.sectionTitle}>The TastyHub <span className={styles.gradientText}>Difference</span></h2>
           </div>
           <div className={styles.checklist}>
             {[
-              { title: "Verified Properties & Stays", desc: "Every hotel, homestay and camp is personally inspected by our team before listing." },
-              { title: "Flexible Cancellation", desc: "Plans change — and we get it. Free cancellation up to 72 hours before departure." },
-              { title: "Small Group Sizes", desc: "Maximum 15 travellers per group for intimate, meaningful experiences." },
-              { title: "All-Inclusive Pricing", desc: "Accommodation, meals, transport, and activities — all covered in one transparent price." },
-              { title: "Safety First", desc: "Comprehensive insurance, trained guides, and 24/7 emergency support on every trip." },
+              { title: "Verified Kitchens & Hygiene", desc: "Every partner kitchen is strictly inspected by our team for top-notch hygiene." },
+              { title: "Lightning Fast Delivery", desc: "Hot food, delivered straight to your door in record time." },
+              { title: "Curated Selections", desc: "Only the best dishes from top-rated restaurants and home chefs." },
+              { title: "All-Inclusive Pricing", desc: "Food, taxes, and minimal delivery fees — all shown transparently at checkout." },
+              { title: "Customer Support First", desc: "24/7 dedicated support to resolve any issues with your orders immediately." },
             ].map((item, i) => (
               <div key={i} className={styles.checkItem} ref={el => revealRef.current[ri++] = el}>
                 <div className={styles.checkIcon}>
@@ -185,9 +185,9 @@ function About() {
       <section className={styles.aboutCta}>
         <div className={styles.container}>
           <div className={styles.ctaBanner}>
-            <h2>Ready to <span className={styles.gradientText}>Join Us</span>?</h2>
-            <p>Start exploring India's most incredible destinations today.</p>
-            <button className={styles.btnPrimary} onClick={() => navigate("/trips")}>Explore Trips →</button>
+            <h2>Ready to <span className={styles.gradientText}>Satisfy Your Cravings</span>?</h2>
+            <p>Start exploring our mouth-watering menu today.</p>
+            <button className={styles.btnPrimary} onClick={() => navigate("/menu")}>Explore Menu →</button>
           </div>
         </div>
       </section>

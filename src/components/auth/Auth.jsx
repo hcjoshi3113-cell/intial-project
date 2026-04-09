@@ -42,10 +42,10 @@ const Auth = () => {
     try {
       if (isSignup) {
         const result = await createUserWithEmailAndPassword(auth, authData.email, authData.password);
-        if (result.user) { await updateProfile(result.user, { displayName: authData.displayName }); navigate("/trips"); }
+        if (result.user) { await updateProfile(result.user, { displayName: authData.displayName }); navigate("/"); }
       } else {
         await signInWithEmailAndPassword(auth, authData.email, authData.password);
-        navigate("/trips");
+        navigate("/");
       }
     } catch (err) {
       const msgs = {
@@ -63,7 +63,7 @@ const Auth = () => {
   const handleGoogleLogin = async () => {
     setIsLoading(true);
     setError(null);
-    try { await signInWithPopup(auth, googleAuth); navigate("/trips"); }
+    try { await signInWithPopup(auth, googleAuth); navigate("/"); }
     catch (err) { if (err.code !== "auth/popup-closed-by-user") setError("Failed to sign in with Google."); setIsLoading(false); }
   };
 
@@ -82,14 +82,14 @@ const Auth = () => {
           <div className={styles.shape1}></div>
           <div className={styles.shape2}></div>
           <div className={styles.shape3}></div>
-          <div className={styles.decoLogo}><span className={styles.decoIcon}>✈</span> TripVerse</div>
-          <div className={styles.decoIllustration}>🌏</div>
-          <h2>Your Adventure Awaits</h2>
-          <p>Join 50,000+ travellers exploring India's most breathtaking destinations with curated experiences.</p>
+          <div className={styles.decoLogo}><span className={styles.decoIcon}>🍔</span> TastyHub</div>
+          <div className={styles.decoIllustration}>🍕</div>
+          <h2>Your Favorite Food Awaits</h2>
+          <p>Join 50,000+ foodies discovering the best pure veg cuisines in your city.</p>
         </div>
 
         {/* Form Panel */}
-        <div className={styles.authFormPanel} style={{marginTop:"2rem"}}>
+        <div className={styles.authFormPanel} style={{ marginTop: "2rem" }}>
           <div className={styles.tabHeader}>
             <button className={`${styles.tabBtn} ${isSignup ? styles.tabActive : ""}`} onClick={() => switchTab(true)}>Create Account</button>
             <button className={`${styles.tabBtn} ${!isSignup ? styles.tabActive : ""}`} onClick={() => switchTab(false)}>Sign In</button>

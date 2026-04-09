@@ -9,7 +9,7 @@
 /* ─── STATS ─── */
 .statsSection { padding: 80px 0 96px; }
 .statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.statCard { text-align: center; padding: 40px 24px; background: #fff; border-radius: var(--radius-card); border: 1px solid rgba(0,0,0,.04); transition: var(--transition); }
+.statCard { text-align: center; padding: 40px 24px; background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid rgba(0,0,0,.04); transition: var(--transition); }
 .statCard:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
 .statIcon { width: 56px; height: 56px; border-radius: 14px; background: linear-gradient(135deg, rgba(0,201,255,.1), rgba(146,254,157,.1)); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.5rem; }
 .statNumber { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; font-family: var(--font-head); background: var(--grad-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 4px; }
@@ -24,7 +24,7 @@
 /* ─── MISSION / VISION ─── */
 .mvSection { padding: 0 0 96px; }
 .mvGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.mvCard { position: relative; padding: 48px 40px; background: #fff; border-radius: var(--radius-card); border: 1px solid rgba(0,0,0,.04); overflow: hidden; transition: var(--transition); }
+.mvCard { position: relative; padding: 48px 40px; background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid rgba(0,0,0,.04); overflow: hidden; transition: var(--transition); }
 .mvCard:hover { box-shadow: var(--shadow-card); transform: translateY(-4px); }
 .mvCard::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--grad-accent); }
 .mvIcon { width: 64px; height: 64px; border-radius: 16px; background: var(--grad-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 1.8rem; }
@@ -34,7 +34,7 @@
 /* ─── VALUES ─── */
 .valuesSection { padding: 0 0 96px; }
 .valuesGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.valueCard { padding: 32px; background: #fff; border-radius: var(--radius-card); border: 1px solid rgba(0,0,0,.04); border-left: 4px solid; transition: var(--transition); }
+.valueCard { padding: 32px; background: var(--card-bg); border-radius: var(--radius-card); border: 1px solid rgba(0,0,0,.04); border-left: 4px solid; transition: var(--transition); }
 .valueCard:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
 .valueCard:nth-child(1) { border-left-color: var(--accent-1); }
 .valueCard:nth-child(2) { border-left-color: var(--accent-2); }
@@ -47,10 +47,10 @@
 /* ─── TEAM ─── */
 .teamSection { padding: 0 0 96px; }
 .teamGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.teamCard { text-align: center; background: #fff; border-radius: var(--radius-card); padding: 40px 24px; border: 1px solid rgba(0,0,0,.04); transition: var(--transition); position: relative; overflow: hidden; }
+.teamCard { text-align: center; background: var(--card-bg); border-radius: var(--radius-card); padding: 40px 24px; border: 1px solid rgba(0,0,0,.04); transition: var(--transition); position: relative; overflow: hidden; }
 .teamCard:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
 .teamAvatar { width: 96px; height: 96px; border-radius: 50%; background: var(--grad-primary); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; color: #fff; font-family: var(--font-head); font-weight: 700; position: relative; }
-.teamAvatar::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 3px solid transparent; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) border-box; -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.teamAvatar::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 3px solid transparent; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) border-box; -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); mask-composite: exclude; }
 .teamCard h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
 .role { color: var(--accent-1); font-size: .85rem; font-weight: 600; margin-bottom: 12px; }
 .teamCard p { color: var(--txt-secondary); font-size: .85rem; line-height: 1.6; }
@@ -63,7 +63,7 @@
 /* ─── CHECKLIST ─── */
 .checklistSection { padding: 0 0 96px; }
 .checklist { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
-.checkItem { display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px; background: #fff; border-radius: var(--radius-btn); border: 1px solid rgba(0,0,0,.04); transition: var(--transition); }
+.checkItem { display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px; background: var(--card-bg); border-radius: var(--radius-btn); border: 1px solid rgba(0,0,0,.04); transition: var(--transition); }
 .checkItem:hover { box-shadow: var(--shadow-card); transform: translateX(4px); }
 .checkIcon { width: 28px; height: 28px; border-radius: 50%; background: rgba(0,201,255,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
 .checkIcon svg { width: 14px; height: 14px; }

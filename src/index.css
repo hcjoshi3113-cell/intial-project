@@ -3,46 +3,48 @@
 
 /* ───────────── DESIGN TOKENS ───────────── */
 :root {
-  /* Primary palette */
-  --clr-primary-1: #0F2027;
-  --clr-primary-2: #203A43;
-  --clr-primary-3: #2C5364;
+  /* Primary palette - Deep Galactic Indigo */
+  --clr-primary-1: #050a14;
+  --clr-primary-2: #0a192f;
+  --clr-primary-3: #112240;
 
-  /* Accent */
-  --accent-1: #00C9FF;
-  --accent-2: #92FE9D;
+  /* Accent - Electric Gradient */
+  --accent-1: #00f2fe;
+  --accent-2: #4facfe;
+  --accent-3: #f093fb;
 
   /* Gradients */
   --grad-primary: linear-gradient(135deg, var(--clr-primary-1), var(--clr-primary-2), var(--clr-primary-3));
   --grad-accent: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  --grad-glow: radial-gradient(circle at center, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
 
   /* Surfaces */
   --card-bg: #ffffff;
-  --card-glass: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.15);
-  --bg-light: #f8fafb;
+  --card-dark: #112240;
+  --card-glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --bg-light: #f4f7f6;
 
   /* Text */
-  --txt-primary: #1A1A2E;
-  --txt-secondary: #6B7280;
+  --txt-primary: #0a192f;
+  --txt-secondary: #4b5563;
+  --txt-white: #f8fafc;
 
   /* Status */
-  --success: #10B981;
-  --danger: #EF4444;
-  --warning: #F59E0B;
-  --price: #00C9FF;
-
-  /* Footer */
-  --footer-bg: #0D1117;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --price: #00f2fe;
 
   /* Shadows */
-  --shadow-card: 0 8px 32px rgba(0, 201, 255, 0.15);
-  --shadow-hover: 0 16px 48px rgba(0, 201, 255, 0.25);
+  --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 20px 60px rgba(0, 242, 254, 0.2);
+  --shadow-glow: 0 0 30px rgba(0, 242, 254, 0.3);
 
   /* Radii */
-  --radius-card: 16px;
-  --radius-btn: 12px;
-  --radius-hero: 24px;
+  --radius-card: 24px;
+  --radius-btn: 14px;
+  --radius-hero: 40px;
 
   /* Layout */
   --max-w: 1280px;
@@ -55,7 +57,7 @@
   --font-head: 'Plus Jakarta Sans', 'Syne', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Z-index */
+  /* z-index */
   --z-navbar: 1000;
   --z-modal: 1500;
 }
