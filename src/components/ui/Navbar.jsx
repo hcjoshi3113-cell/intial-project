@@ -38,7 +38,7 @@ function NavbarComponent() {
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
         <div className={styles.container}>
           <NavLink to="/" className={styles.navLogo} onClick={closeMobile}>
-            <span className={styles.logoIcon}>🍔</span> TastyHub <span className={styles.vegBadge}>Pure Veg</span>
+            <span className={styles.logoIcon}><img src="./logo.png" alt="logo" /></span> TastyHub <span className={styles.vegBadge}>Pure Veg</span>
           </NavLink>
 
 
@@ -49,7 +49,7 @@ function NavbarComponent() {
             <NavLink to="/" className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ""}`} end>Home</NavLink>
             <NavLink to="/restaurants" className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ""}`}>Find Restaurants</NavLink>
             <NavLink to="/about" className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ""}`}>About</NavLink>
-            
+
             {user && (
               <>
                 <NavLink to="/myorders" className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ""}`}>My Orders</NavLink>
